@@ -35,7 +35,17 @@ namespace CodeWars
                 return $"Error => Not found: {num}";
             }
 
-            return "";
+            string number = string.Empty;
+            string name = string.Empty;
+            string address = string.Empty;
+
+            //Extract the number from the line
+
+            //Extract the name form the line
+
+            //Extract the address from the line
+
+            return $"Phone => {number}, Name => {name}, Address => {address}";
         }
     }
 }
