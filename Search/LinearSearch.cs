@@ -8,7 +8,19 @@ namespace Search
     {
         public static int SearchLinear(int[] items, int target)
         {
-            return 0;
+            int index = -1;
+
+            foreach (int i in items)
+            {
+                index++;
+
+                if (target == i)
+                {
+                    return index;
+                }
+            }
+
+            return -1;
         }
     }
 }
