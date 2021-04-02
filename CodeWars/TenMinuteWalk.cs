@@ -6,7 +6,7 @@ namespace CodeWars
 {
     public class TenMinuteWalk
     {
-        public static double IsValidWalk(string[] walk)
+        public static bool IsValidWalk(string[] walk)
         {
             throw new NotImplementedException();
         }
