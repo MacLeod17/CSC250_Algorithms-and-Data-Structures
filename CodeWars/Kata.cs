@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CodeWars
 {
-    public class TenMinuteWalk
+    public class Kata
     {
         public static bool IsValidWalk(string[] walk)
         {
