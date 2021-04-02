@@ -4,7 +4,7 @@ using System;
 namespace CodeWars
 {
     [TestFixture]
-    public class SolutionTest
+    public class TenMinuteWalkTests
     {
         [Test]
         public void SampleTest()
