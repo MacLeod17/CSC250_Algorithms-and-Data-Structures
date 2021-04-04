@@ -12,6 +12,8 @@ namespace CodeWars
 
             rectangles += (w * h);
 
+            int[,] grid = new int[w, h];
+
             for (int w1 = 0; w1 < w; w1++)
             {
                 for (int h1 = 0; h1 < h; h1++)
