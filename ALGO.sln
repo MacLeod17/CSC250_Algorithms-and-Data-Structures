@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeWars", "CodeWars\CodeWa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Isomorphic", "Isomorphic\Isomorphic.csproj", "{7BC2F533-E23E-477E-A86D-FFBA668EBC4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search", "Search\Search.csproj", "{F243150F-118C-4157-BE44-8427133AA8DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Search", "Search\Search.csproj", "{F243150F-118C-4157-BE44-8427133AA8DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigOPractice", "BigOPractice\BigOPractice.csproj", "{391CD5CC-2B68-449F-BB99-E0C55DCCF738}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{F243150F-118C-4157-BE44-8427133AA8DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F243150F-118C-4157-BE44-8427133AA8DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F243150F-118C-4157-BE44-8427133AA8DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{391CD5CC-2B68-449F-BB99-E0C55DCCF738}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{391CD5CC-2B68-449F-BB99-E0C55DCCF738}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{391CD5CC-2B68-449F-BB99-E0C55DCCF738}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{391CD5CC-2B68-449F-BB99-E0C55DCCF738}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
