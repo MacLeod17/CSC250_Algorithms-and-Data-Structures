@@ -10,25 +10,31 @@ namespace BigOPractice
         static void Main(string[] args)
         {
             var watch = new Stopwatch();
-            Random random = new Random();
+            //Random random = new Random();
 
             // long[] useMe = gen
-            List<int> match1 = GenerateArray(250000).ToList();
-            List<int> match2 = GenerateArray(250000).ToList();
+            //List<int> bigInt = GenerateArray(1000).ToList();
+            //List<int> match1 = GenerateArray(250000).ToList();
+            //List<int> match2 = GenerateArray(250000).ToList();
 
-            match1.Sort();
-            match2.Sort();
-            //watch.Start();
-            //var highestValue = Algorithims.Algorithim(useMe);
-            //Algorithims.Algorithim(useMe);
+            //match1.Sort();
+            //match2.Sort();
 
             watch.Start();
-            var matchingArray = Algorithms.MatchMe(match1, match2);
+
+            //var matchingArray = Algorithms.MatchMe(match1.ToArray(), match2.ToArray());
+            //var highInt = Algorithms.Algorithm(bigInt.ToArray());
+            Algorithms.Palindrome("bruh");
+            Algorithms.Palindrome("mAdam");
+            Algorithms.Palindrome("nurses run");
+
             watch.Stop();
 
-            Console.WriteLine("[" + String.Join(", ", matchingArray) + "]");
+            // This was commented out when I was getting the operation count because there were so many ints
+            //    that the operation count could not be found in the console
+            //Console.WriteLine("[" + string.Join(", ", matchingArray) + "]");
 
-            //Console.WriteLine("Highest Value: " + highestValue);
+            //Console.WriteLine("Highest Value: " + highInt);
 
             var elapsedTime = watch.ElapsedMilliseconds != 0 ? watch.ElapsedMilliseconds : watch.ElapsedTicks;
             string milliOrTricks = watch.ElapsedMilliseconds == 0 ? "Ticks" : "ms";

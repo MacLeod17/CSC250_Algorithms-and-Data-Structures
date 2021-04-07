@@ -6,15 +6,14 @@ namespace BigOPractice
 {
     public class Algorithms
     {
-        public static List<int> MatchMe(List<int> a1, List<int> a2)
+        public static int[] MatchMe(int[] a1, int[] a2)
         {
             List<int> matchingNumbers = new List<int>();
-            int nestedIndex = 0;
-            int operationCount = 0;
+            long operationCount = 0;
 
-            for (int i = 0; i < a1.Count; i++)
+            for (int i = 0; i < a1.Length; i++)
             {
-                for (int j = 0; j < a2.Count; j++)
+                for (int j = 0; j < a2.Length; j++)
                 {
                     operationCount++;
                     //If first item in a1 equal to item in second (a2) list
@@ -22,17 +21,17 @@ namespace BigOPractice
                     {
                         // Add matching number
                         matchingNumbers.Add(a1[i]);
-                        nestedIndex = j + 1;
                         break;
                     }
                 }
             }
             Console.WriteLine("Operations: " + operationCount);
-            return matchingNumbers;
+            return matchingNumbers.ToArray();
         }
-        public static int Algorithim(int[] A)
+
+        public static int Algorithm(int[] A)
         {
-            int operationCount = 0;
+            long operationCount = 0;
             if (A.Length > 0)
             {
                 // Last item in the array
@@ -59,6 +58,30 @@ namespace BigOPractice
                 return y;
             }
             return -1;
+        }
+
+        public static bool Palindrome(string phrase)
+        {
+            bool success = false;
+
+            string reverse = string.Empty;
+
+            // Makes spaces and character case irrelevant ("nurses run" and "mAdam" are palindromes)
+            string tempPhrase = phrase.Replace(" ", "").ToLower();
+
+            for (int i = tempPhrase.Length-1; i >= 0; i--)
+            {
+                reverse += tempPhrase[i];
+            }
+
+            if (reverse == tempPhrase)
+            {
+                success = true;
+            }
+
+            Console.WriteLine($"{phrase} Is Palindrome: {success}");
+
+            return success;
         }
     }
 }
