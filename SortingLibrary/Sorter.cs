@@ -22,7 +22,13 @@ namespace SortingLibrary
 
         public static void InsertionSort(T[] arr)
         {
-            throw new NotImplementedException();
+            for (int i = 1; i < arr.Length; i++)
+            {
+                if (arr[i].CompareTo(arr[i - 1]) < 0)
+                {
+
+                }
+            }
         }
 
         public static void SelectionSort(T[] arr)

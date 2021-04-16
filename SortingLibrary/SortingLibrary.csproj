@@ -1,13 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>KilpackG_SortingLib</AssemblyName>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="MSTest.TestAdapter" Version="2.2.3" />
-    <PackageReference Include="NETStandard.Library" Version="2.0.3" />
-  </ItemGroup>
 
 </Project>
