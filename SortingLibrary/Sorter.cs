@@ -8,15 +8,19 @@ namespace SortingLibrary
 {
     public class Sorter<T> where T : IComparable<T>
     {
-        protected int[] bubble;
-
         public static void BubbleSort(T[] arr)
         {
-            T myVar = arr[0];
-
-            if (arr[0].CompareTo(arr[1]) > 0)
+            for (int i = 0; i < arr.Length-1; i++)
             {
-
+                for (int j = 0; j < arr.Length-1-i; j++)
+                {
+                    if (arr[j].CompareTo(arr[j + 1]) > 0)
+                    {
+                        var temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
             }
         }
 
@@ -24,16 +28,41 @@ namespace SortingLibrary
         {
             for (int i = 1; i < arr.Length; i++)
             {
-                if (arr[i].CompareTo(arr[i - 1]) < 0)
-                {
+                T current = arr[i];
+                int j;
 
+                for (j = i - 1; j >= 0; j--)
+                {
+                    if (arr[j].CompareTo(current) > 0)
+                    {
+                        arr[j + 1] = arr[j];
+                        continue;
+                    }
+                    break;
                 }
+
+                arr[j + 1] = current;
             }
         }
 
         public static void SelectionSort(T[] arr)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                int lowestIndex = i;
+
+                for (int j = i; j < arr.Length; j++)
+                {
+                    if (arr[j].CompareTo(arr[lowestIndex]) < 0)
+                    {
+                        lowestIndex = j;
+                    }
+                }
+
+                var temp = arr[i];
+                arr[i] = arr[lowestIndex];
+                arr[lowestIndex] = temp;
+            }
         }
     }
 }
