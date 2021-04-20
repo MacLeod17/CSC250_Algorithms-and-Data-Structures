@@ -64,5 +64,15 @@ namespace SortingLibrary
                 arr[lowestIndex] = temp;
             }
         }
+
+        public static void QuickSort(T[] arr)
+        {
+            
+        }
+
+        public static void MergeSort(T[] arr)
+        {
+
+        }
     }
 }
