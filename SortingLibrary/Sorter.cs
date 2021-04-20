@@ -93,10 +93,10 @@ namespace SortingLibrary
                 arr[i + 1] = arr[high];
                 arr[high] = temp2;
 
-                int p = i + 1;
+                int part = i + 1;
 
-                QuickSortHelper(arr, low, p - 1);
-                QuickSortHelper(arr, p + 1, high);
+                QuickSortHelper(arr, low, part - 1);
+                QuickSortHelper(arr, part + 1, high);
             }
         }
 
