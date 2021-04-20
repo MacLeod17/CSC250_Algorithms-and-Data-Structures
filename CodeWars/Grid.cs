@@ -8,21 +8,7 @@ namespace CodeWars
     {
         public static int NumberOfRectangles(int w, int h)
         {
-            int rectangles = 0;
-
-            rectangles += (w * h);
-
-            int[,] grid = new int[w, h];
-
-            for (int w1 = 0; w1 < w; w1++)
-            {
-                for (int h1 = 0; h1 < h; h1++)
-                {
-                    
-                }
-            }
-
-            return rectangles;
+            return (h*(h+1)*w*(w+1))/4;
         }
     }
 }

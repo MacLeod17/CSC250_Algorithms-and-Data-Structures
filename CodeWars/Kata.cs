@@ -6,21 +6,26 @@ namespace CodeWars
 {
     public class Kata
     {
-        public static int[,] FloodFill(int[,] array, int y, int x, int newValue, int oldValue = int.MinValue)
+        public static int[,] FloodFill(int[,] array, int y, int x, int newValue)
         {
-            if (oldValue == int.MinValue) oldValue = array[y, x];
+            int oldValue = array[y, x];
 
             int lenY = array.GetLength(0) - 1;
             int lenX = array.GetLength(1) - 1;
 
-            if (array[y, x] != oldValue || array[y, x] == newValue) return array;
+            return FloodFillUtil(array, y, x, newValue, oldValue, lenY, lenX);
+        }
 
-            array[y, x] = newValue;
-
-            if (y < lenY) array = FloodFill(array, y + 1, x, newValue, oldValue);
-            if (y > 0) array = FloodFill(array, y - 1, x, newValue, oldValue);
-            if (x < lenX) array = FloodFill(array, y, x + 1, newValue, oldValue);
-            if (x > 0) array = FloodFill(array, y, x - 1, newValue, oldValue);
+        public static int[,] FloodFillUtil(int[,] array, int y, int x, int newValue, int oldValue, int lenY, int lenX)
+        {
+            if (array[y, x] == oldValue)
+            {
+                array[y, x] = newValue;
+                if (y < lenY) array = FloodFillUtil(array, y + 1, x, newValue, oldValue, lenY, lenX);
+                else if (y > 0) array = FloodFillUtil(array, y - 1, x, newValue, oldValue, lenY, lenX);
+                if (x < lenX) array = FloodFillUtil(array, y, x + 1, newValue, oldValue, lenY, lenX);
+                else if (x > 0) array = FloodFillUtil(array, y, x - 1, newValue, oldValue, lenY, lenX);
+            }
 
             return array;
         }
