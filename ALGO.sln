@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Search", "Search\Search.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigOPractice", "BigOPractice\BigOPractice.csproj", "{391CD5CC-2B68-449F-BB99-E0C55DCCF738}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortingLibrary", "SortingLibrary\SortingLibrary.csproj", "{6EA3E8AB-EC2B-43FD-9E32-1824741DE69E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortingLibrary", "SortingLibrary\SortingLibrary.csproj", "{6EA3E8AB-EC2B-43FD-9E32-1824741DE69E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NQueenLab", "NQueenLab\NQueenLab.csproj", "{9EA3728D-AC03-418C-BC44-AF5F8E9D84EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{6EA3E8AB-EC2B-43FD-9E32-1824741DE69E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EA3E8AB-EC2B-43FD-9E32-1824741DE69E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EA3E8AB-EC2B-43FD-9E32-1824741DE69E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EA3728D-AC03-418C-BC44-AF5F8E9D84EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EA3728D-AC03-418C-BC44-AF5F8E9D84EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EA3728D-AC03-418C-BC44-AF5F8E9D84EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EA3728D-AC03-418C-BC44-AF5F8E9D84EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

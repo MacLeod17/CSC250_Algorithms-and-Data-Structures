@@ -8,7 +8,22 @@ namespace CodeWars
     {
         public static int NumberOfRectangles(int w, int h)
         {
-            return (h*(h+1)*w*(w+1))/4;
+            var tempX = 0;
+            var tempY = 0;
+
+            for (int i = 1; i <= w; i++)
+            {
+                tempX += i;
+            }
+
+            for (int i = 1; i <= h; i++)
+            {
+                tempY += i;
+            }
+
+            return tempX * tempY;
+
+            //return (h*(h+1)*w*(w+1))/4;
         }
     }
 }

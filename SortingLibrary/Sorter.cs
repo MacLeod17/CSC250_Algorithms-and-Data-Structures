@@ -102,7 +102,6 @@ namespace SortingLibrary
 
         public static void MergeSort(T[] arr)
         {
-
             MergeSortHelper(arr, 0, arr.Length-1);
         }
 

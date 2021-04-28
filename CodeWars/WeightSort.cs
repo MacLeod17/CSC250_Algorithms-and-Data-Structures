@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace CodeWars
 {
-	public class Number
+	public class Number : IComparable<Number>
     {
         public string Num { get; set; }
         public int Weight { get; set; }
@@ -14,6 +12,16 @@ namespace CodeWars
         {
 			Num = n;
 			Weight = w;
+        }
+
+		// Compares the Weight first (sum of every digit of the Num); if Weight is equal, compares Num
+        public int CompareTo(Number num)
+        {
+			int compareValue = Weight.CompareTo(num.Weight);
+
+			if (compareValue == 0) compareValue = Num.CompareTo(num.Num);
+
+			return compareValue;
         }
     }
 
@@ -28,6 +36,7 @@ namespace CodeWars
 			
 			foreach (string w in weights)
             {
+				// Sum of digits
 				int numWeight = 0;
 
 				foreach(char c in w)
@@ -36,15 +45,34 @@ namespace CodeWars
 					numWeight += n;
                 }
 
+				// Ties the Weight of the number to the number itself
 				Number num = new Number(w, numWeight);
 
+				// Adds the Tied Number-Weight to a list
 				numWeights.Add(num);
             }
 
-			var sortWeight = numWeights.OrderBy(num => num.Weight).ThenBy(num => num.Num);
+			// Selection Sort
+			for (int i = 0; i < numWeights.Count; i++)
+			{
+				int lowestIndex = i;
+
+				for (int j = i; j < numWeights.Count; j++)
+				{
+					if (numWeights[j].CompareTo(numWeights[lowestIndex]) < 0)
+					{
+						lowestIndex = j;
+					}
+				}
+
+				var temp = numWeights[i];
+				numWeights[i] = numWeights[lowestIndex];
+				numWeights[lowestIndex] = temp;
+			}
+			//
 
 			string output = string.Empty;
-			foreach (var num in sortWeight)
+			foreach (var num in numWeights)
             {
 				output += $"{num.Num} ";
             }
